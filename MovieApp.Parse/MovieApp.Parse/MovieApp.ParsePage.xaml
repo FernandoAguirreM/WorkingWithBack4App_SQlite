@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:MovieApp.Parse" 
+    x:Class="MovieApp.Parse.MovieApp_ParsePage"
+    xmlns:vm="clr-namespace:MovieApp.Parse.ViewModel">
+    <ContentPage.BindingContext>
+        <vm:MoviesViewModel x:Name="vmMovies"></vm:MoviesViewModel>
+    </ContentPage.BindingContext>
+    <StackLayout Margin="0,20">
+        <Entry Placeholder="Author of Movie" Text="{Binding NameAuthor}"></Entry>
+        <Entry Placeholder="Name of Movie" Text="{Binding NameMovie}"></Entry>
+        <Button Text="Save data in parse" Command="{Binding Save}"></Button>
+        <Button Text="Get data from parse" Command="{Binding GetData}"></Button>
+        <ListView ItemsSource="{Binding ListMovies}" RowHeight="50" ItemSelected="Handle_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Name}"></Label>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
