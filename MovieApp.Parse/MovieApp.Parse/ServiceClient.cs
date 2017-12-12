@@ -114,7 +114,9 @@ namespace MovieApp.Parse
             IEnumerable<T> result = new List<T>();
             try
             {
-                return await query.FindAsync();
+                result = await query.FindAsync();
+
+                return result;
             }
             catch (Exception ex)
             {

@@ -22,7 +22,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ServiceClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Movies.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MoviesViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\BaseModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
